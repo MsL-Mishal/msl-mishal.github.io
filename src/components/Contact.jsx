@@ -120,7 +120,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative z-10 bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-8"
+              className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-8"
             >
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               
@@ -162,7 +162,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative z-10 bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-8"
+              className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-8"
             >
               <h3 className="text-2xl font-bold mb-6">Follow Me</h3>
               
