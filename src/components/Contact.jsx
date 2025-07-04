@@ -1,3 +1,5 @@
+/* global gtag */
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaPhone, FaDownload } from "react-icons/fa";
@@ -6,6 +8,14 @@ import { personalInfo } from "../data/data";
 const Contact = () => {
   const handleEmailClick = (e) => {
     e.preventDefault(); // Prevent default link behavior, which means it won't navigate away from the page
+
+    // Track email click
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': 'email_contact_click'
+      });
+    }
 
     const email = personalInfo.email;
     const mailtoLink = `mailto:${email}`;
@@ -40,6 +50,14 @@ const Contact = () => {
   const handlePhoneClick = (e) => {
     e.preventDefault(); // Prevent default link behavior, which means it won't navigate away from the page  
 
+    // Track phone click
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'click', {
+        'event_category': 'contact',
+        'event_label': 'phone_click'
+      });
+    }
+
     const phone = personalInfo.phone;
     const telLink = `tel:${phone}`;
     // Try to open tel link
@@ -67,6 +85,14 @@ const Contact = () => {
   };
 
   const handleResumeDownload = () => {
+    // Track resume download
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'download', {
+        'event_category': 'resume',
+        'event_label': 'resume_download'
+      });
+    }
+    
     const link = document.createElement('a');
     link.href = personalInfo.resume;
     link.download = 'Mishal_K_R_Resume.pdf';
@@ -211,6 +237,15 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => {
+                        // Track social media click
+                        if (typeof gtag !== 'undefined') {
+                          gtag('event', 'click', {
+                            'event_category': 'social',
+                            'event_label': `${social.label.toLowerCase()}_contact_click`
+                          });
+                        }
+                      }}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
