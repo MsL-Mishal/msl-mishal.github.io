@@ -126,10 +126,10 @@ export const skills = {
         { name: "Next.js", level: 80 }
     ],
     backend: [
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "Python", level: 70 },
+        { name: "Node.js", level: 90 },
+        { name: "Express.js", level: 85 },
+        { name: "Java", level: 90 },
+        { name: "Python", level: 75 },
         { name: "C++", level: 65 },
         { name: "PostgreSQL", level: 70 },
         { name: "MySQL", level: 80 },
@@ -137,9 +137,9 @@ export const skills = {
     ],
     tools: [
         { name: "Git", level: 90 },
-        { name: "GitHub", level: 70 },
+        { name: "GitHub", level: 80 },
         { name: "AWS", level: 65 },
-        { name: "VS Code", level: 75 },
+        { name: "VS Code", level: 85 },
         { name: "Postman", level: 80 },
         { name: "Prisma", level: 80 },
         { name: "Turborepo", level: 70 },
