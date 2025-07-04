@@ -229,7 +229,7 @@ const Contact = () => {
                   onClick={handleResumeDownload}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center px-8 py-3 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark dark:hover:text-white transition-colors duration-200"
+                  className="inline-flex items-center px-8 py-3 border-2 border-accent-light dark:border-accent-dark text-accent-light dark:text-accent-dark rounded-lg font-semibold hover:bg-accent-light hover:text-white dark:hover:bg-accent-dark dark:hover:text-white transition-colors duration-200 cursor-none"
                 >
                   <FaDownload className="mr-2" />
                   Download Resume

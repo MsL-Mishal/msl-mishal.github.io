@@ -14,7 +14,7 @@ const ThemeToggle = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="p-2 rounded-lg bg-primary-shade-light dark:bg-primary-shade-dark hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-colors duration-200"
+            className="p-2 rounded-lg bg-primary-shade-light dark:bg-primary-shade-dark hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-colors duration-200 cursor-none"
         >
             {darkMode ? (
                 <BsSun className="text-accent-light dark:text-accent-dark text-lg" />
