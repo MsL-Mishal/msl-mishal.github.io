@@ -143,7 +143,7 @@ const Hero = () => {
                                         if (typeof gtag !== 'undefined') {
                                             gtag('event', 'click', {
                                                 'event_category': 'social',
-                                                'event_label': `${social.title.toLowerCase()}_click`
+                                                'event_label': `${social.title.toLowerCase()}_hero_click`
                                             });
                                         }
                                         // Call original onClick if it exists
