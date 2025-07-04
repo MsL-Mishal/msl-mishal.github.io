@@ -1,3 +1,5 @@
+/* global gtag */
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from "react-icons/fa";
@@ -76,6 +78,15 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => {
+                    // Track social media click from footer
+                    if (typeof gtag !== 'undefined') {
+                      gtag('event', 'click', {
+                        'event_category': 'social',
+                        'event_label': `${social.label.toLowerCase()}_footer_click`
+                      });
+                    }
+                  }}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
