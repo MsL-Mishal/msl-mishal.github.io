@@ -20,6 +20,7 @@
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
     @apply text-secondary-light bg-primary-light dark:text-secondary-dark dark:bg-primary-dark;
+    overflow-x: hidden;
   }
 
   html {
@@ -29,7 +30,7 @@
 
 @layer components {
   .container-width {
-    @apply max-w-6xl mx-auto;
+    @apply w-full max-w-6xl mx-auto;
   }
 
   .card-hover {

@@ -9,7 +9,7 @@ const EducationCard = ({ education, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -10 }}
-      className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg overflow-hidden card-hover"
+      className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg overflow-hidden card-hover w-full p-4 sm:p-6 md:p-8"
     >
       <div className="h-48 overflow-hidden">
         <img 

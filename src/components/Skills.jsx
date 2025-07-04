@@ -35,7 +35,7 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-              className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-8 relative z-10"
+              className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-4 sm:p-6 md:p-8 w-full relative z-10"
             >
               <h3 className="text-2xl font-bold mb-6 text-center">{category.title}</h3>
 
