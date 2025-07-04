@@ -30,7 +30,7 @@
 
 @layer components {
   .container-width {
-    @apply w-full max-w-6xl mx-auto;
+    @apply w-full mx-auto;
   }
 
   .card-hover {
