@@ -5,9 +5,9 @@ import { personalInfo } from "../data/data";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FaGithub, href: personalInfo.socialLinks.github, label: "GitHub" },
-    { icon: FaLinkedin, href: personalInfo.socialLinks.linkedin, label: "LinkedIn" },
-    { icon: FaTwitter, href: personalInfo.socialLinks.twitter, label: "Twitter" }
+    { icon: FaGithub, href: personalInfo.socialLinks.github, label: "GitHub", title: "GitHub"},
+    { icon: FaLinkedin, href: personalInfo.socialLinks.linkedin, label: "LinkedIn", title: "LinkedIn"},
+    { icon: FaTwitter, href: personalInfo.socialLinks.twitter, label: "Twitter", title: "Twitter"}
   ];
 
   return (
@@ -83,6 +83,7 @@ const Footer = () => {
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.9 }}
                   className="w-10 h-10 bg-accent-dark/20 rounded-lg flex items-center justify-center text-accent-dark hover:bg-accent-dark hover:text-white transition-all duration-200"
+                  title={social.title}
                 >
                   <social.icon />
                 </motion.a>
