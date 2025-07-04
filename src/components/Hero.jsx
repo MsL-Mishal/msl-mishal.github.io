@@ -16,13 +16,17 @@ const Hero = () => {
         window.location.href = mailtoLink;
 
         // Fallback: Copy email to clipboard after a short delay
-        setTimeout(() => {
+        if(!window.location.href.includes("mailto:")) {
+            setTimeout(() => {
             navigator.clipboard.writeText(email).then(() => {
                 alert(`Email copied to clipboard: ${email}`);
             }).catch(() => {
                 alert(`Please email me at: ${email}`);
             });
         }, 100);
+        }
+        // Note: The above fallback is a workaround in case the mailto link doesn't work
+        // directly, which can happen in some browsers or environments.
     };
 
     const socialIcons = [
@@ -145,12 +149,14 @@ const Hero = () => {
                             {/* Resume Button */}
                             <motion.a
                                 href={personalInfo.resume}
-                                download="Mishal-KR-Resume.pdf"
+                                // download="Mishal-KR-Resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.2, y: -5 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="text-xl flex items-center justify-center w-20 h-5 rounded-lg bg-tertiary-light dark:bg-tertiary-dark text-primary-light dark:text-primary-dark font-semibold shadow-md transition-colors duration-200 hover:bg-accent-light dark:hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark"
                                 style={{ minWidth: '2.5rem', minHeight: '1.5rem' }}
-                                title="Download Resume"
+                                title="View Resume"
                             >
                                 <span className="text-sm font-bold">Resume</span>
                             </motion.a>
