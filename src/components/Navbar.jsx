@@ -50,7 +50,7 @@ const Navbar = () => {
                     {/* Logo and Brand */}
                     <Link to="home" smooth={true} duration={500}>
                         <motion.div
-                            className="flex items-center space-x-3 cursor-pointer"
+                            className="flex items-center space-x-3"
                             whileHover={{ scale: 1.05 }}
                         >
                             <img
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 key={item.to}
                                 to={item.to}
                                 {...linkProps}
-                                className="cursor-pointer hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200"
+                                className="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200"
                             >
                                 {item.label}
                             </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                             to={item.to}
                             onClick={() => setIsNavOpen(false)}
                             {...linkProps}
-                            className="block cursor-pointer hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200"
+                            className="block hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200"
                         >
                             {item.label}
                         </Link>
