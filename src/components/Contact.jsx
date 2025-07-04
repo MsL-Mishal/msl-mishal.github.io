@@ -9,7 +9,7 @@ const Contact = () => {
 
     const email = personalInfo.email;
     const mailtoLink = `mailto:${email}`;
-    
+
     // Try to open mailto link
     window.location.href = mailtoLink;  // This will open the user's default email client
 
@@ -18,26 +18,58 @@ const Contact = () => {
     // This can happen if the user does not have an email client set up
     // or if the browser does not support mailto links */
 
-    
+
     // Fallback: Copy email to clipboard after a short delay
-    setTimeout(() => {
-      // Attempt to copy email to clipboard
-      if (!navigator.clipboard) {
-        alert(`Please email me at: ${email}`);
-      } else {
-        navigator.clipboard.writeText(email).then(() => {
-          alert(`Email copied to clipboard: ${email}`);
-        }).catch(() => {
+
+    if (!window.location.href.startsWith('mailto:')) {
+      setTimeout(() => {
+        // Attempt to copy email to clipboard
+        if (!navigator.clipboard) {
           alert(`Please email me at: ${email}`);
-        });
-      }
-    }, 100);
+        } else {
+          navigator.clipboard.writeText(email).then(() => {
+            alert(`Email copied to clipboard: ${email}`);
+          }).catch(() => {
+            alert(`Please email me at: ${email}`);
+          });
+        }
+      }, 100);
+    }
+  };
+
+  const handlePhoneClick = (e) => {
+    e.preventDefault(); // Prevent default link behavior, which means it won't navigate away from the page  
+
+    const phone = personalInfo.phone;
+    const telLink = `tel:${phone}`;
+    // Try to open tel link
+    window.location.href = telLink;  // This will open the user's default phone app
+
+    /* // If the tel link fails, show an alert
+    // This is a fallback in case the tel link does not work
+    // This can happen if the user does not have a phone app set up
+    // or if the browser does not support tel links */
+    // Fallback: Copy phone number to clipboard after a short delay
+    if (!window.location.href.startsWith('tel:')) {
+      setTimeout(() => {
+        // Attempt to copy phone number to clipboard
+        if (!navigator.clipboard) {
+          alert(`Please call me at: ${phone}`);
+        } else {
+          navigator.clipboard.writeText(phone).then(() => {
+            alert(`Phone number copied to clipboard: ${phone}`);
+          }).catch(() => {
+            alert(`Please call me at: ${phone}`);
+          });
+        }
+      }, 100);
+    }
   };
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = personalInfo.resume;
-    link.download = 'Mishal_K_R_Resume.pdf'; 
+    link.download = 'Mishal_K_R_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -61,7 +93,8 @@ const Contact = () => {
       icon: FaPhone,
       label: "Phone",
       value: personalInfo.phone,
-      href: `tel:${personalInfo.phone}` 
+      href: `tel:${personalInfo.phone}`,
+      onClick: handlePhoneClick
     }
   ];
 
@@ -101,11 +134,11 @@ const Contact = () => {
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
               </div>
             </motion.div>
-            
+
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's Connect</h2>
               <p className="text-lg text-tertiary-light dark:text-tertiary-dark max-w-2xl mx-auto">
-                I'm always interested in hearing about new opportunities and exciting projects. 
+                I'm always interested in hearing about new opportunities and exciting projects.
                 Feel free to reach out if you'd like to connect!
               </p>
             </div>
@@ -123,7 +156,7 @@ const Contact = () => {
               className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-4 sm:p-6 md:p-8 max-w-sm"
             >
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
@@ -165,12 +198,12 @@ const Contact = () => {
               className="bg-primary-light dark:bg-primary-dark rounded-xl shadow-lg p-4 sm:p-6 md:p-8 max-w-sm"
             >
               <h3 className="text-2xl font-bold mb-6">Follow Me</h3>
-              
+
               <div className="space-y-6">
                 <p className="text-tertiary-light dark:text-tertiary-dark mb-6">
                   Connect with me on social media to stay updated with my latest projects and insights.
                 </p>
-                
+
                 <div className="grid grid-cols-3 gap-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
@@ -210,7 +243,7 @@ const Contact = () => {
             <div className="bg-gradient-to-r from-accent-light/10 to-accent-dark/10 dark:from-accent-light/5 dark:to-accent-dark/5 rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Work Together?</h3>
               <p className="text-tertiary-light dark:text-tertiary-dark mb-6 max-w-2xl mx-auto">
-                Whether you have a project in mind or just want to chat about technology, 
+                Whether you have a project in mind or just want to chat about technology,
                 I'd love to hear from you. Let's create something amazing together!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -224,7 +257,7 @@ const Contact = () => {
                   <FaEnvelope className="mr-2" />
                   Send me an email
                 </motion.a>
-                
+
                 <motion.button
                   onClick={handleResumeDownload}
                   whileHover={{ scale: 1.05 }}
