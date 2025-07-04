@@ -1,3 +1,5 @@
+/* global gtag */
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
@@ -18,12 +20,12 @@ const Hero = () => {
         // Fallback: Copy email to clipboard after a short delay
         if(!window.location.href.includes("mailto:")) {
             setTimeout(() => {
-            navigator.clipboard.writeText(email).then(() => {
-                alert(`Email copied to clipboard: ${email}`);
-            }).catch(() => {
-                alert(`Please email me at: ${email}`);
-            });
-        }, 100);
+                navigator.clipboard.writeText(email).then(() => {
+                    alert(`Email copied to clipboard: ${email}`);
+                }).catch(() => {
+                    alert(`Please email me at: ${email}`);
+                });
+            }, 100);
         }
         // Note: The above fallback is a workaround in case the mailto link doesn't work
         // directly, which can happen in some browsers or environments.
@@ -33,7 +35,7 @@ const Hero = () => {
         { icon: FaGithub, href: personalInfo.socialLinks.github, title: "GitHub", color: "hover:text-secondary-light dark:hover:text-secondary-dark", isExternal: true },
         { icon: FaLinkedin, href: personalInfo.socialLinks.linkedin, title: "LinkedIn", color: "hover:text-blue-600 dark:hover:text-blue-600", isExternal: true },
         { icon: FaTwitter, href: personalInfo.socialLinks.twitter, title: "Twitter", color: "hover:text-sky-500 dark:hover:text-sky-500", isExternal: true },
-        { icon: FaEnvelope, href: `mailto:${personalInfo.email}`, title: "Mail Me", color: "hover:text-red-500 dark:hover:text-red-500", isExternal: false, onClick: handleEmailClick }
+        { icon: FaEnvelope, href: `mailto:${personalInfo.email}`, title: "Email", color: "hover:text-red-500 dark:hover:text-red-500", isExternal: false, onClick: handleEmailClick }
     ];
 
     return (
@@ -130,13 +132,25 @@ const Hero = () => {
                             transition={{ duration: 0.8, delay: 1.2 }}
                             className="flex justify-center lg:justify-start space-x-6 mt-8"
                         >
-                            {/* Social Links */ }
+                            {/* Social Links */}
                             {socialIcons.map((social, index) => (
                                 <motion.a
                                     key={index}
                                     href={social.href}
                                     {...(social.isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                                    {...(social.onClick ? { onClick: social.onClick } : {})}
+                                    onClick={(e) => {
+                                        // Track social media click
+                                        if (typeof gtag !== 'undefined') {
+                                            gtag('event', 'click', {
+                                                'event_category': 'social',
+                                                'event_label': `${social.title.toLowerCase()}_click`
+                                            });
+                                        }
+                                        // Call original onClick if it exists
+                                        if (social.onClick) {
+                                            social.onClick(e);
+                                        }
+                                    }}
                                     title={social.title}
                                     whileHover={{ scale: 1.2, y: -5 }}
                                     whileTap={{ scale: 0.9 }}
@@ -152,6 +166,15 @@ const Hero = () => {
                                 // download="Mishal-KR-Resume.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={() => {
+                                    // Track resume view
+                                    if (typeof gtag !== 'undefined') {
+                                        gtag('event', 'click', {
+                                            'event_category': 'resume',
+                                            'event_label': 'resume_view'
+                                        });
+                                    }
+                                }}
                                 whileHover={{ scale: 1.2, y: -5 }}
                                 whileTap={{ scale: 0.9 }}
                                 className="text-xl flex items-center justify-center w-20 h-5 rounded-lg bg-tertiary-light dark:bg-tertiary-dark text-primary-light dark:text-primary-dark font-semibold shadow-md transition-colors duration-200 hover:bg-accent-light dark:hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent-light dark:focus:ring-accent-dark"
