@@ -48,13 +48,13 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: skillIndex * 0.1 }}
                   >
-                    <div className="flex justify-between items-center mb-2">
+                    <div className="flex justify-start items-center mb-2">
                       <span className="font-medium text-secondary-light dark:text-secondary-dark">
                         {skill.name}
                       </span>
-                      <span className="text-sm text-tertiary-light dark:text-tertiary-dark">
+                      {/* <span className="text-sm text-tertiary-light dark:text-tertiary-dark">
                         {skill.level}%
-                      </span>
+                      </span> */}
                     </div>
 
                     <div className="w-full bg-primary-shade-light dark:bg-primary-shade-dark rounded-full h-2">
