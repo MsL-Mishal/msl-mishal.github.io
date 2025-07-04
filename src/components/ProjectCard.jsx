@@ -1,3 +1,5 @@
+/* global gtag */
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -51,6 +53,15 @@ const ProjectCard = ({ project, index }) => {
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                // Track GitHub link click
+                if (typeof gtag !== 'undefined') {
+                  gtag('event', 'click', {
+                    'event_category': 'project',
+                    'event_label': `${project.title}_github_click`
+                  });
+                }
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 text-tertiary-light dark:text-tertiary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200"
@@ -65,6 +76,15 @@ const ProjectCard = ({ project, index }) => {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                // Track live demo link click
+                if (typeof gtag !== 'undefined') {
+                  gtag('event', 'click', {
+                    'event_category': 'project',
+                    'event_label': `${project.title}_live_link_click`
+                  });
+                }
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 text-tertiary-light dark:text-tertiary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200"
