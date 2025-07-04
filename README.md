@@ -14,6 +14,9 @@ A modern and responsive personal portfolio website built to showcase my projects
 - Smooth scrolling and intuitive navigation
 - Social media and contact links
 - Downloadable resume
+- **Google Analytics integration** with custom event tracking
+- **SEO optimized** with meta tags and social sharing
+- **Accessibility features** with proper alt attributes and semantic HTML
 
 ## 🛠️ Tech Stack
 - [React](https://react.dev/)
@@ -21,6 +24,16 @@ A modern and responsive personal portfolio website built to showcase my projects
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+
+## 📊 Analytics & Tracking
+The portfolio includes comprehensive Google Analytics 4 integration with custom event tracking:
+
+- **Contact Interactions**: Email clicks, phone clicks, resume downloads
+- **Social Media Engagement**: GitHub, LinkedIn, Twitter clicks from different sections
+- **Project Engagement**: GitHub code and live demo link clicks
+- **Resume Views**: Tracking when users view the resume
+
+All events are categorized and labeled for detailed analytics insights.
 
 ## 🚀 Getting Started
 
@@ -43,6 +56,11 @@ A modern and responsive personal portfolio website built to showcase my projects
 4. **Build for production:**
    ```bash
    npm run build
+   ```
+
+5. **Deploy to GitHub Pages:**
+   ```bash
+   npm run deploy
    ```
 
 ## 🧭 Deployment
@@ -68,6 +86,17 @@ MsL-Mishal.github.io/
 ├── package.json
 └── ...
 ```
+
+## 🎯 Performance & Optimization
+- **Optimized animations** with Framer Motion
+- **Minified production builds** with Vite
+- **Fast loading** with optimized bundle size
+- **Efficient component structure** for better performance
+
+## ♿ Accessibility
+- **Semantic HTML** structure using proper tags (`<section>`, `<main>`, `<nav>`, `<footer>`)
+- **Alt attributes** for all images
+- **Dark/light theme** for better contrast options
 
 ## 🙏 Credits
 - [Vite](https://vitejs.dev/)
