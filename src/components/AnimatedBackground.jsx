@@ -31,6 +31,8 @@ const AnimatedBackground = () => {
       });
     }
 
+    let animationFrameId;
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear Canvas
 
@@ -53,13 +55,18 @@ const AnimatedBackground = () => {
         ctx.fill();
       });
 
-      requestAnimationFrame(animate); // Continue animation
+      animationFrameId = requestAnimationFrame(animate); // Continue animation
     };
 
     animate();
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
+
+      // Cancel animation when component unmounts 
+      // (i.e. when the user navigates away from the page)
+      // Preventing memory leaks
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
