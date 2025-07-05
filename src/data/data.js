@@ -10,7 +10,7 @@ import resumePdf from "../assets/resume.pdf";
 export const personalInfo = {
     name: "Mishal K R",
     title: "Full Stack Developer",
-    description: "Passionate developer creating innovative digital experiences",
+    description: "Building meaningful digital experiences with clarity, care, and code.",
     email: "mishalrajeev@gmail.com",
     phone: "+91 9633616388",
     location: "Kerala, India",
@@ -36,9 +36,9 @@ export const education = [
         startDate: "2020",
         endDate: "2022",
         description: [
-            "Specialized in Computer and Information Science",
-            "University Union Councellor of the Batch",
             "University 3rd Rank Holder",
+            "Elected University Union Councillor for the batch",
+            "Specialized in Computer and Information Science"
         ],
         image: cusatImage,
     },
@@ -47,11 +47,11 @@ export const education = [
         degree: "B.Tech in Computer Science and Engineering",
         university: "Cochin University of Science and Technology",
         startDate: "2014",
-        endDate: "2019",
+        endDate: "2018",
         description: [
-            "Specialized in Computer Science and Engineering",
-            "Graduated with First Class",
-            "GATE 2019 Qualified in First Attempt",
+            "Graduated with First Class in Computer Science and Engineering",
+            "Qualified GATE 2019 in the first attempt",
+            "Built a strong foundation in core computer science subjects"
         ],
         image: cusatImage,
     },
@@ -67,8 +67,8 @@ export const workExperience = [
         endDate: "Present",
         description: [
             "Worked on full-stack apps using MERN stack, focusing on API development, user auth (JWT), and MongoDB schema design.",
-            "Designed responsive UIs with React, Tailwind CSS.",
-            "Used Postman for API testing and followed MVC architecture.",
+            "Developed responsive UIs with React, Tailwind CSS.",
+            "Tested APIs using Postman and followed MVC architecture for code structure.",
             "Note: Freelance projects were taken for learning and upskilling purposes, not tied to public clients or deliverables.",
         ],
         image: mslLogo,
@@ -80,7 +80,7 @@ export const workExperience = [
         startDate: "September 2023",
         endDate: "September 2024",
         description: [
-            "Taught: OOP with Java, Web Technologies and Programming, Python, MongoDB, MySQL.",
+            "Taught courses including OOP with Java, Web Technologies and Programming, Python, MongoDB, MySQL.",
             "Guided final-year projects and coordinated class activities.",
             "Conducted labs and hands-on coding sessions for data management and programming courses.",
         ],
@@ -107,9 +107,9 @@ export const projects = [
         id: 1,
         title: "Portfolio Website",
         description:
-            "A modern, responsive portfolio website built with React and Framer Motion, featuring smooth animations and dark mode.",
+            "A sleek, responsive personal portfolio built with React and Vite. Features include smooth Framer Motion animations, dark/light theme toggle, SEO optimization, and Google Analytics integration.",
         image: portfolioImage,
-        technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
+        technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite", "Google Analytics", "SEO"],
         githubLink: "https://github.com/MsL-Mishal/MsL-Mishal.github.io",
         liveLink: "https://msl-mishal.github.io/",
     },

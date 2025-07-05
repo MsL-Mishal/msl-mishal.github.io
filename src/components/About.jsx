@@ -27,8 +27,7 @@ const About = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
           <p className="text-lg text-tertiary-light dark:text-tertiary-dark max-w-2xl mx-auto">
-            I'm a passionate developer with a love for creating innovative digital experiences.
-            Here's a glimpse into my educational background and professional journey.
+            I'm a passionate developer with a strong computer science foundation and a love for clean, purposeful code. From guiding future tech minds to building full-stack solutions, here's a glimpse into my journey.
           </p>
         </motion.div>
 
