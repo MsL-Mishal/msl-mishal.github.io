@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 import { personalInfo } from "../data/data";
-import AnimatedBackground from "./AnimatedBackground";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 const Hero = () => {
 

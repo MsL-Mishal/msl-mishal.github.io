@@ -1,13 +1,13 @@
 import { ThemeProvider } from "./context/ThemeContext";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Footer from "./components/Footer";
-import CustomCursor from "./components/CustomCursor";
 import useTouchScreen from "./hooks/useTouchScreen";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import CustomCursor from "./components/CustomCursor";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 // import AnimatedBackground from "./components/AnimatedBackground";
 
 export default function App() {

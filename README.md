@@ -76,7 +76,22 @@ MsL-Mishal.github.io/
 ├── public/
 ├── src/
 │   ├── assets/           # Images and static assets
-│   ├── components/       # React components
+│   ├── components/       # Reusable UI components
+│   │   ├── AnimatedBackground.jsx
+│   │   ├── CustomCursor.jsx
+│   │   ├── EducationCard.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ProjectCard.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   └── WorkExperienceCard.jsx
+│   ├── sections/         # Main page sections
+│   │   ├── About.jsx
+│   │   ├── AboutBasic.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Projects.jsx
+│   │   └── Skills.jsx
 │   ├── context/          # React context (theme)
 │   ├── data/             # Data for portfolio
 │   ├── hooks/            # Custom React hooks
@@ -91,7 +106,13 @@ MsL-Mishal.github.io/
 - **Optimized animations** with Framer Motion
 - **Minified production builds** with Vite
 - **Fast loading** with optimized bundle size
-- **Efficient component structure** for better performance
+- **Efficient component structure** with organized sections and reusable components
+- **Memory leak prevention** with proper cleanup in animated components
+
+## 🏗️ Code Organization
+- **Sections folder**: Contains main page sections (Hero, About, Skills, Projects, Contact)
+- **Components folder**: Contains reusable UI components (Navbar, Footer, Cards, etc.)
+- **Clean separation**: Logical grouping for better maintainability and scalability
 
 ## ♿ Accessibility
 - **Semantic HTML** structure using proper tags (`<section>`, `<main>`, `<nav>`, `<footer>`)

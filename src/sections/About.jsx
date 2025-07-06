@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { education, workExperience } from "../data/data";
-import EducationCard from "./EducationCard";
-import WorkExperienceCard from "./WorkExperienceCard";
+import EducationCard from "../components/EducationCard";
+import WorkExperienceCard from "../components/WorkExperienceCard";
 
 const About = () => {
   const containerVariants = {
