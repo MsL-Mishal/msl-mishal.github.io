@@ -61,15 +61,15 @@ export const education = [
 export const workExperience = [
     {
         id: 1,
-        title: "Freelance Software Developer",
-        company: "Freelance",
+        title: "Self-Initiated Full-Stack Projects",
+        company: "Independent Learning & Practice",
         startDate: "January 2025",
         endDate: "Present",
         description: [
-            "Worked on full-stack apps using MERN stack, focusing on API development, user auth (JWT), and MongoDB schema design.",
-            "Developed responsive UIs with React, Tailwind CSS.",
-            "Tested APIs using Postman and followed MVC architecture for code structure.",
-            "Note: Freelance projects were taken for learning and upskilling purposes, not tied to public clients or deliverables.",
+            "Built multiple full-stack applications using the MERN stack to strengthen backend logic, database design, and authentication (JWT).",
+            "Developed responsive user interfaces with React and Tailwind CSS following component-driven development",
+            "Practiced API development and testing using Express.js, Postman, and followed MVC-based architecture.",
+            "Applied clean code principles and project structuring learned from technical training and cohort projects.",
         ],
         image: mslLogo,
     },
