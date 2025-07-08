@@ -4,7 +4,7 @@ const CustomCursor = () => {
   const [innerPosition, setInnerPosition] = useState({ x: -20, y: -20 });
   const [outerPosition, setOuterPosition] = useState({ x: -20, y: -20 });
   const [isVisible, setIsVisible] = useState(true);
-    const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   // For Tracking Mouse Movements
   useEffect(() => {
