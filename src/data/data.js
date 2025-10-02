@@ -119,11 +119,11 @@ export const projects = [
 export const skills = {
     frontend: [
         { name: "React.js", level: 90 },
+        { name: "Next.js", level: 80 },
         { name: "TypeScript", level: 85 },
         { name: "JavaScript", level: 95 },
         { name: "HTML/CSS", level: 90 },
         { name: "Tailwind CSS", level: 85 },
-        { name: "Next.js", level: 80 },
         { name: "Shadcn", level: 80 },
     ],
     backend: [
