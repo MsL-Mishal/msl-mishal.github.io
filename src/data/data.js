@@ -125,6 +125,8 @@ export const skills = {
         { name: "HTML/CSS", level: 90 },
         { name: "Tailwind CSS", level: 85 },
         { name: "Shadcn", level: 80 },
+        { name: "Redux Toolkit", level: 75 },
+        { name: "TanStack Query", level: 70 },
     ],
     backend: [
         { name: "Node.js", level: 90 },
@@ -162,6 +164,7 @@ export const additionalSkills = [
     "CI/CD",
     "Vite",
     "npm",
+    "pnpm",
     "Bcrypt",
     "JWT",
     "Zod",
