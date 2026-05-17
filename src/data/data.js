@@ -158,10 +158,11 @@ export const skills = {
         { name: "RAG Systems", level: 80 },
         { name: "Embeddings", level: 80 },
         { name: "Vector Databases", level: 75 },
-        { name: "Ollama", level: 80 },
         { name: "Azure AI Search", level: 75 },
-        { name: "Azure Document Intelligence", level: 70 },
-        { name: "AI Integrations", level: 80 },
+        { name: "ChromaDB", level: 60 },
+        { name: "FAISS", level: 60 },
+        { name: "Ollama", level: 80 },
+        { name: "Azure Document Intelligence", level: 70 }
     ],
     frontend: [
         { name: "React.js", level: 90 },
@@ -175,31 +176,35 @@ export const skills = {
         { name: "TanStack Query", level: 80 },
     ],
     backend: [
-        { name: "Node.js", level: 90 },
-        { name: "Express.js", level: 85 },
         { name: "Java", level: 90 },
         { name: "Spring Boot", level: 70 },
         { name: "Apache Camel", level: 65 },
+        { name: "Node.js", level: 90 },
+        { name: "Express.js", level: 85 },
         { name: "Python", level: 75 },
         { name: "FastAPI", level: 65 },
         { name: "C++", level: 65 },
+        { name: "Websockets", level: 75 }
+    ],
+    data: [
         { name: "PostgreSQL", level: 70 },
         { name: "MySQL", level: 80 },
         { name: "MongoDB", level: 75 },
+        { name: "Prisma", level: 80 },
     ],
-    tools: [
-        { name: "Git", level: 90 },
-        { name: "GitHub", level: 80 },
-        { name: "AWS", level: 65 },
+    cloud: [
         { name: "Azure", level: 75 },
         { name: "Azure VMs", level: 75 },
         { name: "Azure Container Apps", level: 70 },
         { name: "Docker", level: 70 },
+        { name: "AWS", level: 65 },
+    ],
+    tools: [
+        { name: "Git", level: 90 },
+        { name: "GitHub", level: 80 },
         { name: "VS Code", level: 85 },
         { name: "Postman", level: 80 },
-        { name: "Prisma", level: 80 },
-        { name: "Turborepo", level: 70 },
-        { name: "Websockets", level: 75 },
+        { name: "Turborepo", level: 70 }
     ],
 };
 

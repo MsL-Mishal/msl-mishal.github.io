@@ -5,10 +5,12 @@ import { additionalSkills } from "../data/data";
 
 const Skills = () => {
   const skillCategories = [
-    { title: "AI", skills: skills.ai },
+    { title: "AI & GenAI", skills: skills.ai },
     { title: "Frontend", skills: skills.frontend },
     { title: "Backend", skills: skills.backend },
-    { title: "Tools & Others", skills: skills.tools }
+    { title: "Data & Persistence", skills: skills.data },
+    { title: "Cloud & DevOps", skills: skills.cloud },
+    { title: "Tools", skills: skills.tools }
   ];
 
   return (
