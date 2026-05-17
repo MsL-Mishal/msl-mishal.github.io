@@ -62,7 +62,7 @@ export const education = [
 export const workExperience = [
     {
         id: 1,
-        title: "AI Engineer",
+        title: "AI Engineer | Software Engineer",
         company: "Confidential Company",
         startDate: "2025",
         endDate: "Present",
@@ -134,6 +134,8 @@ export const projects = [
             "Ollama",
             "Azure AI Search",
             "Azure Document Intelligence",
+            "Azure Blob Storage",
+            "Azure VMs",
             "RAG",
             "Vector Databases",
         ],
@@ -196,6 +198,7 @@ export const skills = {
         { name: "Azure", level: 75 },
         { name: "Azure VMs", level: 75 },
         { name: "Azure Container Apps", level: 70 },
+        { name: "Azure Blob Storage", level: 65 },
         { name: "Docker", level: 70 },
         { name: "AWS", level: 65 },
     ],
@@ -203,6 +206,9 @@ export const skills = {
         { name: "Git", level: 90 },
         { name: "GitHub", level: 80 },
         { name: "VS Code", level: 85 },
+        { name: "Cursor", level: 80 },
+        { name: "Antigravity", level: 80 },
+        { name: "IntelliJ IDEA", level: 75 },
         { name: "Postman", level: 80 },
         { name: "Turborepo", level: 70 }
     ],
