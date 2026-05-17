@@ -124,7 +124,7 @@ export const projects = [
         id: 1,
         title: "Enterprise AI Knowledge Retrieval System",
         description:
-            "Built an AI-powered document retrieval and question-answering system using LLMs, embeddings, LangChain, Azure AI Search, and RAG pipelines for intelligent contextual search and document understanding.",
+            "Built an enterprise AI-powered document retrieval and question-answering system using LLMs, embeddings, LangChain, Azure AI Search, and RAG pipelines for contextual search and intelligent document understanding.",
         image: enterpriseRag,
         technologies: [
             "Java",
