@@ -5,6 +5,7 @@ import { additionalSkills } from "../data/data";
 
 const Skills = () => {
   const skillCategories = [
+    { title: "AI", skills: skills.ai },
     { title: "Frontend", skills: skills.frontend },
     { title: "Backend", skills: skills.backend },
     { title: "Tools & Others", skills: skills.tools }

@@ -1,6 +1,7 @@
 import cusatImage from "../assets/experience-cusat-expanded.jpeg";
 import iptifImage from "../assets/experience-iptif.png";
 import portfolioImage from "../assets/project-portfolio-1.jpg";
+import enterpriseRag from "../assets/project-enterprise-rag.png";
 import mslLogo from "../assets/msl-logo-expanded.jpeg";
 import mslLogoTransparent from "../assets/msl-logo-transparent.png";
 import mslProfilePhoto from "../assets/msl-profile.jpg";
@@ -9,7 +10,7 @@ import resumePdf from "../assets/resume.pdf";
 // Personal Information
 export const personalInfo = {
     name: "Mishal K R",
-    title: "Full Stack Developer",
+    title: "AI Engineer & Full Stack Developer",
     description: "Building meaningful digital experiences with clarity, care, and code.",
     email: "mishalrajeev@gmail.com",
     phone: "+91 9633616388",
@@ -61,6 +62,22 @@ export const education = [
 export const workExperience = [
     {
         id: 1,
+        title: "AI Engineer",
+        company: "Confidential Company",
+        startDate: "2025",
+        endDate: "Present",
+        description: [
+            "Building AI-powered enterprise applications using LLMs, RAG pipelines, embeddings, and vector databases.",
+            "Worked with Ollama-hosted models on Azure Virtual Machines, including Gemma models for local/private inference workflows.",
+            "Implemented retrieval and document processing pipelines using LangChain, Azure AI Search, and embedding models such as Nomic Embed.",
+            "Integrated Azure Document Intelligence for intelligent document parsing and content extraction.",
+            "Developed backend services and orchestration workflows using Java, Spring Boot, and Apache Camel.",
+            "Deployed and managed AI infrastructure using Azure Container Apps and Azure Virtual Machines.",
+        ],
+        image: mslLogo,
+    },
+    {
+        id: 2,
         title: "Self-Initiated Full-Stack Projects",
         company: "Independent Learning & Practice",
         startDate: "January 2025",
@@ -74,7 +91,7 @@ export const workExperience = [
         image: mslLogo,
     },
     {
-        id: 2,
+        id: 3,
         title: "Assistant Professor",
         company: "Department of Computer Applications, CUSAT",
         startDate: "September 2023",
@@ -87,7 +104,7 @@ export const workExperience = [
         image: cusatImage,
     },
     {
-        id: 3,
+        id: 4,
         title: "Software Engineer",
         company: "IIT Palakkad Technology Ihub Foundation (IPTIF)",
         startDate: "November 2022",
@@ -105,6 +122,24 @@ export const workExperience = [
 export const projects = [
     {
         id: 1,
+        title: "Enterprise AI Knowledge Retrieval System",
+        description:
+            "Built an AI-powered document retrieval and question-answering system using LLMs, embeddings, LangChain, Azure AI Search, and RAG pipelines for intelligent contextual search and document understanding.",
+        image: enterpriseRag,
+        technologies: [
+            "Java",
+            "Spring Boot",
+            "Apache Camel",
+            "LangChain",
+            "Ollama",
+            "Azure AI Search",
+            "Azure Document Intelligence",
+            "RAG",
+            "Vector Databases",
+        ],
+    },
+    {
+        id: 2,
         title: "Portfolio Website",
         description:
             "A sleek, responsive personal portfolio built with React and Vite. Features include smooth Framer Motion animations, dark/light theme toggle, SEO optimization, and Google Analytics integration.",
@@ -112,11 +147,22 @@ export const projects = [
         technologies: ["React", "Framer Motion", "Tailwind CSS", "Vite", "Google Analytics", "SEO"],
         githubLink: "https://github.com/MsL-Mishal/MsL-Mishal.github.io",
         liveLink: "https://msl-mishal.github.io/",
-    },
+    }
 ];
 
 // Skills
 export const skills = {
+    ai: [
+        { name: "LLMs", level: 85 },
+        { name: "LangChain", level: 70 },
+        { name: "RAG Systems", level: 80 },
+        { name: "Embeddings", level: 80 },
+        { name: "Vector Databases", level: 75 },
+        { name: "Ollama", level: 80 },
+        { name: "Azure AI Search", level: 75 },
+        { name: "Azure Document Intelligence", level: 70 },
+        { name: "AI Integrations", level: 80 },
+    ],
     frontend: [
         { name: "React.js", level: 90 },
         { name: "Next.js", level: 80 },
@@ -131,9 +177,11 @@ export const skills = {
     backend: [
         { name: "Node.js", level: 90 },
         { name: "Express.js", level: 85 },
-        { name: "FastAPI", level: 65 },
         { name: "Java", level: 90 },
+        { name: "Spring Boot", level: 70 },
+        { name: "Apache Camel", level: 65 },
         { name: "Python", level: 75 },
+        { name: "FastAPI", level: 65 },
         { name: "C++", level: 65 },
         { name: "PostgreSQL", level: 70 },
         { name: "MySQL", level: 80 },
@@ -143,6 +191,10 @@ export const skills = {
         { name: "Git", level: 90 },
         { name: "GitHub", level: 80 },
         { name: "AWS", level: 65 },
+        { name: "Azure", level: 75 },
+        { name: "Azure VMs", level: 75 },
+        { name: "Azure Container Apps", level: 70 },
+        { name: "Docker", level: 70 },
         { name: "VS Code", level: 85 },
         { name: "Postman", level: 80 },
         { name: "Prisma", level: 80 },
@@ -152,6 +204,10 @@ export const skills = {
 };
 
 export const additionalSkills = [
+    "Generative AI",
+    "Prompt Engineering",
+    "Authentication & Authorization",
+    "System Design",
     "Problem Solving",
     "Agile/Scrum",
     "Version Control",
